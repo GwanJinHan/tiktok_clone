@@ -28,7 +28,4 @@ class Sizes {
   static const size72 = 72.0;
   static const size80 = 80.0;
   static const size96 = 96.0;
-  // tailwind에 있는 사이즈를 가져와 dart로 변환
 }
-
-// 이제 그냥 숫자로 크기 값을 주는게 아니라, Sizes.size1 이런식으로 사용할 수 있게 됨

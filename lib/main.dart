@@ -29,7 +29,7 @@ class TikTokApp extends StatelessWidget {
         scaffoldBackgroundColor: Colors.white,
         primaryColor: const Color(0xFFE9435A),
       ),
-      home: const InterestsScreen(),
+      home: const SignUpScreen(),
     );
   }
 }

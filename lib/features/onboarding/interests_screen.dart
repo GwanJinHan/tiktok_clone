@@ -148,6 +148,7 @@ class _InterestsScreenState extends State<InterestsScreen> {
         elevation: 2,
         child: CupertinoButton(
           onPressed: _onNextTap,
+          color: Theme.of(context).primaryColor,
           child: const Text("Next"),
         ),
       ),
