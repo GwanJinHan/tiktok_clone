@@ -1,4 +1,7 @@
 {
-    "cmake.sourceDirectory": "C:/Users/gksrh/Desktop/tiktok_clone/windows/flutter",
-    "java.compile.nullAnalysis.mode": "automatic"
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true,
+    "source.fixAll": true
+  },
+  "dart.flutterLints": true
 }
