@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:tiktok_clone/constants/gaps.dart';
 import 'package:tiktok_clone/constants/sizes.dart';
+import 'package:tiktok_clone/utils.dart';
 
 class ChatDetailScreen extends StatefulWidget {
   const ChatDetailScreen({super.key});
@@ -23,6 +24,7 @@ class _ChatDetailScreenState extends State<ChatDetailScreen> {
             padding: const EdgeInsets.only(
               left: Sizes.size3,
               right: Sizes.size5,
+              bottom: Sizes.size5,
             ),
             child: Stack(
               children: [
@@ -31,11 +33,11 @@ class _ChatDetailScreenState extends State<ChatDetailScreen> {
                   foregroundImage: NetworkImage(
                     "https://static-00.iconduck.com/assets.00/flutter-icon-2048x2048-ufx4idi8.png",
                   ),
-                  child: Text("Flutter"),
+                  child: Text(""),
                 ),
                 Positioned(
                   bottom: 0,
-                  right: -3,
+                  right: 0,
                   child: Container(
                     width: Sizes.size20,
                     height: Sizes.size20,
@@ -61,18 +63,18 @@ class _ChatDetailScreenState extends State<ChatDetailScreen> {
             ),
           ),
           subtitle: const Text("Active Now"),
-          trailing: const Row(
+          trailing: Row(
             mainAxisSize: MainAxisSize.min,
             children: [
               FaIcon(
                 FontAwesomeIcons.flag,
-                color: Colors.black,
+                color: Theme.of(context).iconTheme.color,
                 size: Sizes.size20,
               ),
               Gaps.h32,
               FaIcon(
                 FontAwesomeIcons.ellipsis,
-                color: Colors.black,
+                color: Theme.of(context).iconTheme.color,
                 size: Sizes.size20,
               ),
               Gaps.h14,
@@ -131,12 +133,12 @@ class _ChatDetailScreenState extends State<ChatDetailScreen> {
           Positioned(
             bottom: 0,
             width: MediaQuery.of(context).size.width,
-            child: BottomAppBar(
+            child: Container(
                 padding: const EdgeInsets.symmetric(
                   horizontal: Sizes.size20,
                   vertical: Sizes.size14,
                 ),
-                color: Colors.grey.shade100,
+                color: isDarkMode(context) ? Colors.black : Colors.grey.shade50,
                 child: Row(
                   children: [
                     Expanded(

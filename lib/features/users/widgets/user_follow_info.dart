@@ -29,7 +29,7 @@ class UserFollowInfo extends StatelessWidget {
           style: TextStyle(
             color: Colors.grey.shade500,
           ),
-        )
+        ),
       ],
     );
   }
